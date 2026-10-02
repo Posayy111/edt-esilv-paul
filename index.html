@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Emploi du temps de Paul</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap">
+<style id="app-css">:root{--bg:#E7EAED;--paper:#FFFFFF;--ink:#000000;--text:#15171A;--muted:#565C64;--line:#C6CCD2;--red:#C00000;--focus:#1B5FD6;--bdd-b:#D9E6F7;--bdd-f:#0E3A6C;--poo-b:#E4DDF5;--poo-f:#3A2872;--web-b:#D3EEE2;--web-f:#0C5038;--net-b:#F8DDCD;--net-f:#782C0C;--dev-b:#E0ECCD;--dev-f:#2E5111;--py-b:#F6E8BF;--py-f:#634405;--dt-b:#F5D9E4;--dt-f:#781E43;--k8s-b:#F4D3D3;--k8s-f:#7C1B1B;--eng-b:#CDEDF4;--eng-f:#0A4856;--mtb-b:#EBDDC8;--mtb-f:#553912;--ren-b:#E3DDF0;--ren-f:#34294F;--ate-b:#EBC3C4;--ate-f:#5E1A1D;--x-b:#E9E7E1;--x-f:#3D3C38;}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#101215;--paper:#1A1D21;--ink:#E8E9EB;--text:#E8E9EB;--muted:#A2A8B0;--line:#353B42;--red:#FF8C84;--focus:#7FA8FF;--bdd-b:#1C3150;--bdd-f:#D2E2F8;--poo-b:#2D2650;--poo-f:#DED7F7;--web-b:#163E31;--web-f:#C9EEDD;--net-b:#4A2615;--net-f:#F7D8C7;--dev-b:#283C15;--dev-f:#DAEBC4;--py-b:#45350E;--py-f:#F3E4B5;--dt-b:#4A1C30;--dt-f:#F5D2E0;--k8s-b:#4C1C1C;--k8s-f:#F4D0D0;--eng-b:#12393F;--eng-f:#CBEDF2;--mtb-b:#3D3122;--mtb-f:#EDDFCB;--ren-b:#2E2A3E;--ren-f:#E0DAF0;--ate-b:#4A2426;--ate-f:#F1CFD0;--x-b:#33322E;--x-f:#E4E2DB;}}
+:root[data-theme="dark"]{--bg:#101215;--paper:#1A1D21;--ink:#E8E9EB;--text:#E8E9EB;--muted:#A2A8B0;--line:#353B42;--red:#FF8C84;--focus:#7FA8FF;--bdd-b:#1C3150;--bdd-f:#D2E2F8;--poo-b:#2D2650;--poo-f:#DED7F7;--web-b:#163E31;--web-f:#C9EEDD;--net-b:#4A2615;--net-f:#F7D8C7;--dev-b:#283C15;--dev-f:#DAEBC4;--py-b:#45350E;--py-f:#F3E4B5;--dt-b:#4A1C30;--dt-f:#F5D2E0;--k8s-b:#4C1C1C;--k8s-f:#F4D0D0;--eng-b:#12393F;--eng-f:#CBEDF2;--mtb-b:#3D3122;--mtb-f:#EDDFCB;--ren-b:#2E2A3E;--ren-f:#E0DAF0;--ate-b:#4A2426;--ate-f:#F1CFD0;--x-b:#33322E;--x-f:#E4E2DB;}
+.s-bdd{--sb:var(--bdd-b);--sf:var(--bdd-f)}.s-poo{--sb:var(--poo-b);--sf:var(--poo-f)}.s-web{--sb:var(--web-b);--sf:var(--web-f)}.s-net{--sb:var(--net-b);--sf:var(--net-f)}.s-dev{--sb:var(--dev-b);--sf:var(--dev-f)}.s-py{--sb:var(--py-b);--sf:var(--py-f)}.s-dt{--sb:var(--dt-b);--sf:var(--dt-f)}.s-k8s{--sb:var(--k8s-b);--sf:var(--k8s-f)}.s-eng{--sb:var(--eng-b);--sf:var(--eng-f)}.s-mtb{--sb:var(--mtb-b);--sf:var(--mtb-f)}.s-ren{--sb:var(--ren-b);--sf:var(--ren-f)}.s-ate{--sb:var(--ate-b);--sf:var(--ate-f)}.s-x{--sb:var(--x-b);--sf:var(--x-f)}
+:root{--rh:28px;--fs:10px;--hs:10.5px;--tc:34px;--serif:"Source Serif 4",Georgia,"Times New Roman",serif;--sans:"Source Sans 3",system-ui,-apple-system,"Segoe UI",sans-serif;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:border-box}
+[hidden]{display:none!important}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--sans);-webkit-text-size-adjust:100%;overflow-x:hidden}
+button{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 8px 110px}
+.top{padding:22px 4px 6px}
+h1{font:700 clamp(30px,7vw,46px)/1.05 var(--serif);letter-spacing:-.01em;margin:0 0 8px}
+.sub{margin:0;font-size:16px;line-height:1.45;max-width:62ch}
+.upd{margin:4px 0 0;font-size:14px;color:var(--muted)}
+.owner{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:14px 0 0}
+.hint{font-size:14px;color:var(--muted);flex:1 1 240px}
+.btn{font:600 15px var(--sans);min-height:44px;padding:0 16px;border:1.5px solid var(--ink);background:var(--paper);color:var(--text);cursor:pointer}
+.btn.pri{background:var(--ink);color:var(--paper)}
+.notice{margin:12px 0 0;padding:10px 12px;border:1.5px solid var(--ink);background:var(--paper);font-size:15px;line-height:1.45}
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);margin:14px -8px 0;padding:8px 8px 8px;border-bottom:1px solid var(--line)}
+.views{display:flex;justify-content:space-between;gap:8px}
+.seg{display:inline-flex;border:1.5px solid var(--ink);background:var(--paper)}
+.seg button,.solo{font:600 15px var(--sans);min-height:44px;padding:0 14px;border:0;background:var(--paper);cursor:pointer}
+.seg button+button{border-left:1.5px solid var(--ink)}
+.solo{border:1.5px solid var(--ink)}
+.views [aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+.pills{position:relative;display:flex;gap:6px;overflow-x:auto;margin-top:8px;scrollbar-width:none}
+.pills::-webkit-scrollbar{display:none}
+.pills button{flex:none;display:inline-flex;align-items:center;min-height:34px;padding:0 12px;border:1px solid var(--line);border-radius:999px;background:var(--paper);color:var(--text);font:600 14px var(--sans);cursor:pointer;-webkit-appearance:none;appearance:none}
+.pills button.now{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:3px}
+.pills button.on{border-color:var(--ink);box-shadow:inset 0 0 0 1px var(--ink)}
+.filters{display:flex;flex-wrap:wrap;gap:6px;margin:14px 0 0}
+.chip{display:inline-flex;align-items:center;gap:7px;min-height:36px;padding:0 12px;border:1px solid var(--line);border-radius:999px;background:var(--paper);font-size:14px;cursor:pointer}
+.chip i{width:11px;height:11px;border-radius:2px;background:var(--sb);box-shadow:inset 0 0 0 1px var(--sf)}
+.chip[aria-pressed="false"]{background:transparent;color:var(--muted);text-decoration:line-through}
+.chip[aria-pressed="false"] i{background:transparent}
+.chip.reset{border-color:var(--ink)}
+.legend{margin:10px 2px 0;font-size:14px;line-height:1.45;color:var(--muted);max-width:70ch}
+.week{margin-top:30px;scroll-margin-top:calc(env(safe-area-inset-top,0px) + 112px)}
+.wk-h{display:flex;align-items:baseline;justify-content:space-between;gap:8px;margin:0 2px 8px}
+.wk-h h2{font:700 21px/1.2 var(--serif);margin:0}
+.wk-h span{font-size:14px;color:var(--muted);white-space:nowrap}
+.gap{display:flex;align-items:center;gap:12px;margin:30px 0 0;font:italic 15px var(--serif);color:var(--muted)}
+.gap::before,.gap::after{content:"";flex:1;border-top:1px dashed var(--line)}
+.empty{font-size:15px;color:var(--muted);padding:14px 4px}
+.sheet{background:var(--paper);border:2px solid var(--ink)}
+.gh{display:grid;grid-template-columns:var(--tc) repeat(5,minmax(0,1fr));border-bottom:2px solid var(--ink)}
+.gh div{font:700 var(--hs)/1.15 var(--serif);text-transform:uppercase;letter-spacing:.02em;text-align:center;padding:6px 2px;border-left:1.5px solid var(--ink);display:flex;align-items:center;justify-content:center;overflow-wrap:anywhere}
+.gh .c0{border-left:0;position:sticky;left:0;z-index:4;background:var(--paper)}
+.gin{min-width:0}
+.gh .today{background:var(--ink);color:var(--paper)}
+.gb{position:relative;display:grid;grid-template-columns:var(--tc) minmax(0,1fr);height:calc(var(--rows)*var(--rh))}
+.ln{position:absolute;left:0;right:0;height:var(--rh);border-top:1px solid var(--line)}
+.ln:first-child{border-top:0}
+.tcol{position:sticky;left:0;z-index:3;background:var(--paper);border-right:1.5px solid var(--ink)}
+.tl{height:var(--rh);border-top:1px solid var(--line);font:600 var(--fs)/var(--rh) var(--serif);text-align:center}
+.tl:first-child{border-top:0}
+.cols{position:relative;display:grid;grid-template-columns:repeat(5,minmax(0,1fr))}
+.col{position:relative;border-left:1px solid var(--line)}
+.col:first-child{border-left:0}
+.blk{position:absolute;left:0;right:0;top:calc(var(--rh)*var(--y));height:calc(var(--rh)*var(--h));display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;padding:2px;overflow:hidden;text-align:center;font:400 var(--fs)/1.14 var(--serif);border:1.5px solid var(--ink);background:var(--sb);color:var(--sf);cursor:pointer;z-index:2}
+.v-p .blk{background:var(--paper);color:var(--ink)}
+.v-p .blk.s-ren,.v-p .blk.s-ate,.v-p .blk.s-x{background:var(--sb);color:var(--sf)}
+.blk .nm{font-weight:700}
+.blk .ty{font-weight:400}
+.blk .tm{font-weight:600}
+.blk .ty2{font-weight:400;opacity:.85}
+.blk .pf{max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;letter-spacing:-.01em}
+.blk .rm{max-width:100%}
+.rm{color:var(--red);font-weight:700}
+.rm.unk,.droom.unk{font-style:italic}
+.lg{display:none}
+.blk[data-xs] .pf{display:none}
+.blk.cx{border-style:dashed;background:var(--paper)!important;color:var(--muted)!important}
+.blk.cx .nm,.drow.cx .dname{text-decoration:line-through}
+.cxl{font-style:italic;font-weight:700;color:var(--red)}
+.blk:hover{box-shadow:inset 0 0 0 1.5px var(--ink)}
+.days{display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(min(100%,340px),1fr))}
+.dbox{background:var(--paper);border:2px solid var(--ink);align-self:start}
+.dh{font:700 16px/1.2 var(--serif);text-transform:uppercase;letter-spacing:.02em;padding:9px 12px;border-bottom:2px solid var(--ink)}
+.dh.today{background:var(--ink);color:var(--paper)}
+.drow{display:grid;grid-template-columns:84px minmax(0,1fr) auto;gap:10px;width:100%;align-items:start;padding:11px 12px;border:0;border-top:1px solid var(--line);background:var(--paper);text-align:left;cursor:pointer}
+.dh+.drow{border-top:0}
+.drow>span{display:block}
+.dtime{font:700 15px/1.3 var(--serif)}
+.dname{display:block;font:700 16px/1.3 var(--serif)}
+.dname .ty{font-weight:400}
+.sw{display:inline-block;width:11px;height:11px;border-radius:2px;margin-right:7px;background:var(--sb);box-shadow:inset 0 0 0 1px var(--sf)}
+.dsub{display:block;font-size:14px;color:var(--muted);margin-top:3px}
+.droom{font:700 15px/1.3 var(--serif);color:var(--red);text-align:right;max-width:112px}
+.droom small{display:block;font:400 13px var(--sans);color:var(--muted);font-style:normal}
+.foot{margin-top:44px;font-size:14px;line-height:1.5;color:var(--muted);max-width:70ch}
+.savebar{position:fixed;left:0;right:0;bottom:0;z-index:10;display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:space-between;padding:10px 12px calc(10px + env(safe-area-inset-bottom,0px));background:var(--paper);border-top:2px solid var(--ink);font-size:15px}
+.sb-a{display:flex;gap:8px}
+dialog{border:2px solid var(--ink);padding:0;width:calc(100% - 24px);max-width:540px;max-height:86vh;overflow:auto;background:var(--paper);color:var(--text)}
+dialog::backdrop{background:rgba(0,0,0,.5)}
+.dlg-h{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;padding:14px 16px;border-bottom:2px solid var(--ink);position:sticky;top:0;background:var(--paper)}
+.dlg-h h3{font:700 21px/1.2 var(--serif);margin:0}
+.dlg-h p{margin:4px 0 0;font-size:15px;color:var(--muted)}
+.x{flex:none;width:44px;height:44px;border:1.5px solid var(--ink);background:var(--paper);font-size:22px;line-height:1;cursor:pointer}
+.sess{padding:14px 16px;border-top:1px solid var(--line)}
+.sess:first-child{border-top:0}
+.sd{margin:0 0 8px;font:700 16px/1.3 var(--serif)}
+.cxb{font-style:italic;color:var(--red)}
+.kv{display:grid;grid-template-columns:78px 1fr;gap:5px 12px;margin:0;font-size:15px;line-height:1.4}
+.kv dt{color:var(--muted)}
+.kv dd{margin:0}
+.kv .red{color:var(--red);font-weight:700}
+.kv .unk{font-style:italic;color:var(--red);font-weight:700}
+.ed{margin:8px 0 0;font-size:14px;color:var(--muted);font-style:italic}
+.ef{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px;padding-top:12px;border-top:1px dashed var(--line)}
+.ef label{display:grid;gap:4px;font-size:14px;color:var(--muted)}
+.ef .full{grid-column:1/-1}
+.ef input[type=text],.ef input[type=time]{font:16px var(--sans);min-height:44px;padding:8px 10px;border:1.5px solid var(--ink);background:var(--paper);color:var(--text);width:100%}
+.ef .chk{display:flex;align-items:center;gap:10px;color:var(--text);font-size:15px;min-height:44px}
+.ef .chk input{width:22px;height:22px;accent-color:var(--ink)}
+.err{grid-column:1/-1;margin:0;font-size:14px;color:var(--red)}
+.err:empty{display:none}
+@media (min-width:640px){:root{--rh:30px;--fs:11.5px;--hs:12.5px;--tc:46px}.wrap{padding:0 16px 110px}.bar{margin:14px -16px 0;padding:8px 16px}dialog{margin:auto}}
+@media (min-width:900px){:root{--rh:34px;--fs:13px;--hs:14px;--tc:56px}.blk{padding:3px 5px;gap:2px}.sh{display:none}.lg{display:inline}}
+@media (max-width:639px){dialog{margin:auto 0 0;width:100%;max-width:none;border-width:2px 0 0;padding-bottom:env(safe-area-inset-bottom,0px)}}
+@media print{.bar,.filters,.legend,.owner,.notice,.savebar,.foot{display:none!important}body{background:#fff}.week{break-inside:avoid;page-break-inside:avoid}}
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script type="application/json" id="edt-data">{"meta":{"who":"Paul","desc":"ESILV 4e année, CSDS2 en alternance","updated":"2026-10-02","src":"mon_calendrier.ics","edited":"2026-10-02"},"ev":[["RESA_RENTREE-2026-10-05-09:00:00","20261005","0900","1000","Réservation - Rentrée","NR","PARC-A202 (42),PARC-A204 (40),PARC-A206 (40)","Paris - Parc","AZOUGH Ahmed","Salle triple",""],["RESA_RENTREE-2026-10-05-10:00:00","20261005","1000","1130","Réservation - Rentrée","NR","PARC-A206 (40),PARC-A202 (42),PARC-A204 (40)","Paris - Parc","AZOUGH Ahmed","Salle triple",""],["MMIAIT--0126-2026-10-05-13:30:00","20261005","1330","1500","Atelier Outils digitaux","CMo","PARC-A206 (40),ZOOM,CYBR-B101 (44),PARC-A202 (42),PARC-A204 (40)","Paris - Parc,Online,Paris - Cyber","MIKABERIDZE Konstantin","Salle triple","distanciel"],["MACSIN4A0326-2026-10-05-17:00:00","20261005","1700","1830","Advanced Database management","CM","PARC-A204 (40),PARC-A206 (40),PARC-A202 (42)","Paris - Parc","KAGHAT Fatima Zahra","Salle triple",""],["MACSIN4A1526-2026-10-06-08:15:00","20261006","0815","0945","Adv Object-Oriented Progr","CM","PARC-C204 (40),PARC-C206 (44),PARC-C202 (44)","Paris - Parc","NAHLE Nada","salle triple",""],["MACSIN4A0626-2026-10-06-10:00:00","20261006","1000","1130","Web Application Architectures","CM","PARC-C202 (44),PARC-C204 (40),PARC-C206 (44)","Paris - Parc","NAUWYNCK Arnaud","salle triple",""],["MACSIN4A0326-2026-10-06-13:30:00","20261006","1330","1500","Advanced Database management","TD","PARC-C502 (44)","Paris - Parc","KAGHAT Fatima Zahra","",""],["MACSIN4A0326-2026-10-06-15:15:00","20261006","1515","1645","Advanced Database management","TD","PARC-C502 (44)","Paris - Parc","KAGHAT Fatima Zahra","",""],["MACSIN4A0626-2026-10-06-17:00:00","20261006","1700","1830","Web Application Architectures","TD","PARC-A202 (42)","Paris - Parc","NAUWYNCK Arnaud","",""],["MACSIN4A0626-2026-10-06-18:45:00","20261006","1845","2015","Web Application Architectures","TD","PARC-A202 (42)","Paris - Parc","NAUWYNCK Arnaud","",""],["MACSIN4A0726-2026-10-07-08:15:00","20261007","0815","0945","Digital Twins","CM","PARC-C202 (44),PARC-C204 (40)","Paris - Parc","KHALLOUFI Hamza","Salle double C202+C204",""],["MACSIN4A1126-2026-10-07-10:00:00","20261007","1000","1130","Advanced Networks","CM","PARC-C204 (40),PARC-C202 (44)","Paris - Parc","KHALLOUFI Hamza","Salle double C202+C204",""],["MACSIN4A1526-2026-10-07-13:30:00","20261007","1330","1500","Adv Object-Oriented Progr","TD","ARCH-109 (40)","Paris - Arche","NAHLE Nada","",""],["MACSIN4A1526-2026-10-07-15:15:00","20261007","1515","1645","Adv Object-Oriented Progr","TD","ARCH-109 (40)","Paris - Arche","NAHLE Nada","",""],["MACSIN4A0726-2026-10-07-17:00:00","20261007","1700","1830","Digital Twins","TD","ARCH-307 (32)","Paris - Arche","KHALLOUFI Hamza","",""],["MACSIN4A0726-2026-10-07-18:45:00","20261007","1845","2015","Digital Twins","TD","ARCH-307 (32)","Paris - Arche","KHALLOUFI Hamza","",""],["MACSIN4A1126-2026-10-08-08:15:00","20261008","0815","0945","Advanced Networks","TD","PARC-B507 (44)","Paris - Parc","KHALLOUFI Hamza","",""],["MACSIN4A1126-2026-10-08-10:00:00","20261008","1000","1130","Advanced Networks","TD","PARC-B507 (44)","Paris - Parc","KHALLOUFI Hamza","",""],["MACXLVS70126-2026-10-08-13:30:00","20261008","1330","1500","English Workplace Solutions 1","LV","PARC-B406 (44)","Paris - Parc","REIKIE Patrick","ESILV A4 CSDS CRCL",""],["MACXLVS70126-2026-10-08-15:15:00","20261008","1515","1645","English Workplace Solutions 1","LV","PARC-B406 (44)","Paris - Parc","REIKIE Patrick","ESILV A4 CSDS CRCL",""],["MACSIN4A0326-2026-10-09-08:15:00","20261009","0815","0945","Advanced Database management","CM","PARC-C201 (44),PARC-C203 (40)","Paris - Parc","KAGHAT Fatima Zahra","Salle double C201+C203",""],["MACSIN4A1626-2026-10-09-10:00:00","20261009","1000","1130","DevOps & Software Engineering","CM","PARC-C201 (44),PARC-C203 (40)","Paris - Parc","SAIDI Houda","Salle double C201+C203",""],["MACSIN4A1626-2026-10-09-13:30:00","20261009","1330","1500","DevOps & Software Engineering","TD","PARC-B206 (40)","Paris - Parc","SAIDI Houda","",""],["MACSIN4A1626-2026-10-09-15:15:00","20261009","1515","1645","DevOps & Software Engineering","TD","PARC-B206 (40)","Paris - Parc","SAIDI Houda","",""],["MACSIN4A0626-2026-10-12-08:15:00","20261012","0815","0945","Web Application Architectures","CM","PARC-B202 (38),PARC-B204 (40)","Paris - Parc","NAUWYNCK Arnaud","Salle double B202+B204",""],["MACSIN4A0426-2026-10-12-10:00:00","20261012","1000","1130","Python for Data Engineering","CM","PARC-B202 (38),PARC-B204 (40)","Paris - Parc","OULED DLALA Imen","Salle double B202+B204",""],["MACSIN4A1426-2026-10-12-13:30:00","20261012","1330","1500","Containeriz° & Orchestr°","CM","PARC-B202 (38),PARC-B204 (40)","Paris - Parc","CORDEIRO Maxime","Salle double B202+B204",""],["MACSIN4A0326-2026-10-12-15:15:00","20261012","1515","1645","Advanced Database management","TD","PARC-B203 (40)","Paris - Parc","KAGHAT Fatima Zahra","",""],["MACSIN4A0326-2026-10-12-17:00:00","20261012","1700","1830","Advanced Database management","TD","PARC-B203 (40)","Paris - Parc","KAGHAT Fatima Zahra","",""],["MACSIN4A0326-2026-10-12-18:45:00","20261012","1845","2015","Advanced Database management","CM","PARC-A202 (42),PARC-A204 (40),PARC-A206 (40)","Paris - Parc","KAGHAT Fatima Zahra","Salle double",""],["MACSIN4A1326-2026-10-13-08:15:00","20261013","0815","0945","Master Thesis Bootcamp MSc1","CM","PARC-C001A (200) Amphi 1","Paris - Parc","AZOUGH Ahmed","",""],["MACSIN4A1626-2026-10-13-10:00:00","20261013","1000","1130","DevOps & Software Engineering","CM","PARC-B202 (38),PARC-B204 (40)","Paris - Parc","SAIDI Houda","Salle double",""],["MACSIN4A1626-2026-10-13-13:30:00","20261013","1330","1500","DevOps & Software Engineering","TD","PARC-A405 (44)","Paris - Parc","SAIDI Houda","",""],["MACSIN4A1626-2026-10-13-15:15:00","20261013","1515","1645","DevOps & Software Engineering","TD","PARC-A405 (44)","Paris - Parc","SAIDI Houda","",""],["MACSIN4A0626-2026-10-13-17:00:00","20261013","1700","1830","Web Application Architectures","TD","PARC-B305 (44)","Paris - Parc","NAUWYNCK Arnaud","",""],["MACSIN4A0626-2026-10-13-18:45:00","20261013","1845","2015","Web Application Architectures","TD","PARC-B305 (44)","Paris - Parc","NAUWYNCK Arnaud","",""],["MACSIN4A1526-2026-10-14-08:15:00","20261014","0815","0945","Adv Object-Oriented Progr","CM","PARC-B201 (44),PARC-B203 (40)","Paris - Parc","NAHLE Nada","Salle double B201+B203",""],["MACSIN4A1526-2026-10-14-10:00:00","20261014","1000","1130","Adv Object-Oriented Progr","TD","PARC - Salles de cours","Paris - Parc","NAHLE Nada","",""],["MACSIN4A1526-2026-10-14-11:45:00","20261014","1145","1315","Adv Object-Oriented Progr","TD","PARC - Salles de cours","Paris - Parc","NAHLE Nada","",""],["MACSIN4A1426-2026-10-14-15:15:00","20261014","1515","1645","Containeriz° & Orchestr°","TD","PARC - Salles de cours","Paris - Parc","CORDEIRO Maxime","",""],["MACSIN4A1426-2026-10-14-17:00:00","20261014","1700","1830","Containeriz° & Orchestr°","TD","PARC - Salles de cours","Paris - Parc","CORDEIRO Maxime","",""],["MACXLVS70126-2026-10-15-13:30:00","20261015","1330","1500","English Workplace Solutions 1","LV","PARC - Salles de cours","Paris - Parc","REIKIE Patrick","ESILV A4 CSDS CRCL",""],["MACXLVS70126-2026-10-15-15:15:00","20261015","1515","1645","English Workplace Solutions 1","LV","PARC - Salles de cours","Paris - Parc","REIKIE Patrick","ESILV A4 CSDS CRCL",""],["MACSIN4A1326-2026-10-16-08:15:00","20261016","0815","0945","Master Thesis Bootcamp MSc1","CM","TERR-105 (50)","Paris - Terrasses","AZOUGH Ahmed","",""],["MACSIN4A0426-2026-10-16-15:15:00","20261016","1515","1645","Python for Data Engineering","TD","PARC - Salles de cours","Paris - Parc","OULED DLALA Imen","",""],["MACSIN4A0426-2026-10-16-17:00:00","20261016","1700","1830","Python for Data Engineering","TD","PARC - Salles de cours","Paris - Parc","OULED DLALA Imen","",""],["MACSIN4A0626-2026-11-02-08:15:00","20261102","0815","0945","Web Application Architectures","CM","PARC-B201 (44),PARC-B203 (40)","Paris - Parc","NAUWYNCK Arnaud","Salle double B201+B203",""],["MACSIN4A1526-2026-11-02-10:00:00","20261102","1000","1130","Adv Object-Oriented Progr","CM","PARC-B201 (44),PARC-B203 (40)","Paris - Parc","NAHLE Nada","Salle double B201+B203",""],["MACSIN4A0426-2026-11-02-11:45:00","20261102","1145","1315","Python for Data Engineering","CM","PARC-B203 (40),PARC-B201 (44)","Paris - Parc","OULED DLALA Imen","Salle double B201+B203",""],["MACSIN4A1426-2026-11-02-15:15:00","20261102","1515","1645","Containeriz° & Orchestr°","CM","PARC-B201 (44),PARC-B203 (40)","Paris - Parc","CORDEIRO Maxime","Salle double B201+B203",""],["MACSIN4A0426-2026-11-02-17:00:00","20261102","1700","1830","Python for Data Engineering","TD","PARC - Salles de cours","Paris - Parc","OULED DLALA Imen","",""],["MACSIN4A0426-2026-11-02-18:45:00","20261102","1845","2015","Python for Data Engineering","TD","PARC - Salles de cours","Paris - Parc","OULED DLALA Imen","",""],["MACSIN4A1326-2026-11-03-08:15:00","20261103","0815","0945","Master Thesis Bootcamp MSc1","CM","PARC-B201 (44),PARC-B203 (40)","Paris - Parc","AZOUGH Ahmed","Salle double B201+B203",""],["MACSIN4A1626-2026-11-03-10:00:00","20261103","1000","1130","DevOps & Software Engineering","CM","PARC-B203 (40),PARC-B201 (44)","Paris - Parc","SAIDI Houda","Salle double B201+B203",""],["MACSIN4A1626-2026-11-03-13:30:00","20261103","1330","1500","DevOps & Software Engineering","TD","PARC - Salles de cours","Paris - Parc","SAIDI Houda","",""],["MACSIN4A1626-2026-11-03-15:15:00","20261103","1515","1645","DevOps & Software Engineering","TD","PARC - Salles de cours","Paris - Parc","SAIDI Houda","",""],["MACSIN4A0626-2026-11-03-17:00:00","20261103","1700","1830","Web Application Architectures","TD","PARC - Salles de cours","Paris - Parc","NAUWYNCK Arnaud","",""],["MACSIN4A0626-2026-11-03-18:45:00","20261103","1845","2015","Web Application Architectures","TD","PARC - Salles de cours","Paris - Parc","NAUWYNCK Arnaud","",""],["MACSIN4A1126-2026-11-04-08:15:00","20261104","0815","0945","Advanced Networks","CM","PARC-B201 (44),PARC-B203 (40)","Paris - Parc","KHALLOUFI Hamza","Salle double B201+B203",""],["MACSIN4A0726-2026-11-04-10:00:00","20261104","1000","1130","Digital Twins","CM","PARC-B203 (40),PARC-B201 (44)","Paris - Parc","KHALLOUFI Hamza","Salle double B201+B203",""],["MACSIN4A1426-2026-11-04-13:30:00","20261104","1330","1500","Containeriz° & Orchestr°","TD","PARC - Salles de cours","Paris - Parc","CORDEIRO Maxime","",""],["MACSIN4A1426-2026-11-04-15:15:00","20261104","1515","1645","Containeriz° & Orchestr°","TD","PARC - Salles de cours","Paris - Parc","CORDEIRO Maxime","",""],["MACSIN4A0726-2026-11-04-17:00:00","20261104","1700","1830","Digital Twins","TD","PARC - Salles de cours","Paris - Parc","KHALLOUFI Hamza","Attention salle A102",""],["MACSIN4A0726-2026-11-04-18:45:00","20261104","1845","2015","Digital Twins","TD","PARC - Salles de cours","Paris - Parc","KHALLOUFI Hamza","Attention salle A102",""],["MACSIN4A1126-2026-11-05-08:15:00","20261105","0815","0945","Advanced Networks","TD","PARC - Salles de cours","Paris - Parc","KHALLOUFI Hamza","",""],["MACSIN4A1126-2026-11-05-10:00:00","20261105","1000","1130","Advanced Networks","TD","PARC - Salles de cours","Paris - Parc","KHALLOUFI Hamza","",""],["MACXLVS70126-2026-11-05-13:30:00","20261105","1330","1500","English Workplace Solutions 1","LV","PARC - Salles de cours","Paris - Parc","REIKIE Patrick","ESILV A4 CSDS CRCL",""],["MACXLVS70126-2026-11-05-15:15:00","20261105","1515","1645","English Workplace Solutions 1","LV","PARC - Salles de cours","Paris - Parc","REIKIE Patrick","ESILV A4 CSDS CRCL",""],["MACSIN4A0426-2026-11-06-08:15:00","20261106","0815","0945","Python for Data Engineering","CM","PARC-B203 (40),PARC-B201 (44)","Paris - Parc","OULED DLALA Imen","Salle double B201+B203",""],["MACSIN4A0326-2026-11-06-10:00:00","20261106","1000","1130","Advanced Database management","TD","PARC - Salles de cours","Paris - Parc","KAGHAT Fatima Zahra","",""],["MACSIN4A0326-2026-11-06-11:45:00","20261106","1145","1315","Advanced Database management","TD","PARC - Salles de cours","Paris - Parc","KAGHAT Fatima Zahra","",""],["MACSIN4A1526-2026-11-06-15:15:00","20261106","1515","1645","Adv Object-Oriented Progr","TD","PARC - Salles de cours","Paris - Parc","NAHLE Nada","",""],["MACSIN4A1526-2026-11-06-17:00:00","20261106","1700","1830","Adv Object-Oriented Progr","TD","PARC - Salles de cours","Paris - Parc","NAHLE Nada","",""],["MACSIN4A0626-2026-11-23-08:15:00","20261123","0815","0945","Web Application Architectures","CM","ARCH-AMPHI (154)","Paris - Arche","NAUWYNCK Arnaud","« Ne pas changer la salle SVP »",""],["MACSIN4A0326-2026-11-23-10:00:00","20261123","1000","1130","Advanced Database management","CM","ARCH-AMPHI (154)","Paris - Arche","KAGHAT Fatima Zahra","« Ne pas changer la salle SVP »",""],["MACSIN4A1426-2026-11-23-11:45:00","20261123","1145","1315","Containeriz° & Orchestr°","CM","ARCH-AMPHI (154)","Paris - Arche","CORDEIRO Maxime","« Ne pas changer la salle SVP »",""],["MACSIN4A0426-2026-11-23-15:15:00","20261123","1515","1645","Python for Data Engineering","TD","PARC - Salles de cours","Paris - Parc","OULED DLALA Imen","",""],["MACSIN4A0426-2026-11-23-17:00:00","20261123","1700","1830","Python for Data Engineering","TD","PARC - Salles de cours","Paris - Parc","OULED DLALA Imen","",""],["MACSIN4A1326-2026-11-23-18:45:00","20261123","1845","2015","Master Thesis Bootcamp MSc1","CM","PARC-C001A (200) Amphi 1","Paris - Parc","AZOUGH Ahmed","",""],["MACSIN4A1126-2026-11-24-08:15:00","20261124","0815","0945","Advanced Networks","CM","PARC-B201 (44),PARC-B203 (40)","Paris - Parc","KHALLOUFI Hamza","Salle double B201+B203",""],["MACSIN4A0726-2026-11-24-10:00:00","20261124","1000","1130","Digital Twins","CM","PARC-B203 (40),PARC-B201 (44)","Paris - Parc","KHALLOUFI Hamza","Salle double B201+B203",""],["MACSIN4A0626-2026-11-24-13:30:00","20261124","1330","1500","Web Application Architectures","TD","PARC - Salles de cours","Paris - Parc","NAUWYNCK Arnaud","",""],["MACSIN4A0626-2026-11-24-15:15:00","20261124","1515","1645","Web Application Architectures","TD","PARC - Salles de cours","Paris - Parc","NAUWYNCK Arnaud","",""],["MACSIN4A1126-2026-11-24-17:00:00","20261124","1700","1830","Advanced Networks","TD","PARC - Salles de cours","Paris - Parc","KHALLOUFI Hamza","",""],["MACSIN4A1126-2026-11-24-18:45:00","20261124","1845","2015","Advanced Networks","TD","PARC - Salles de cours","Paris - Parc","KHALLOUFI Hamza","",""],["MACSIN4A0726-2026-11-25-08:15:00","20261125","0815","0945","Digital Twins","TD","PARC - Salles de cours","Paris - Parc","KHALLOUFI Hamza","Attention salle A102",""],["MACSIN4A0726-2026-11-25-10:00:00","20261125","1000","1130","Digital Twins","TD","PARC - Salles informatiques","Paris - Parc","KHALLOUFI Hamza","Attention salle A102",""],["MACSIN4A1426-2026-11-25-13:30:00","20261125","1330","1500","Containeriz° & Orchestr°","TD","PARC - Salles de cours","Paris - Parc","CORDEIRO Maxime","",""],["MACSIN4A1426-2026-11-25-15:15:00","20261125","1515","1645","Containeriz° & Orchestr°","TD","PARC - Salles de cours","Paris - Parc","CORDEIRO Maxime","",""],["MACSIN4A1126-2026-11-25-17:00:00","20261125","1700","1830","Advanced Networks","CM","PARC-B201 (44),PARC-B203 (40)","Paris - Parc","KHALLOUFI Hamza","Salle double B201+B203",""],["MACSIN4A0726-2026-11-25-18:45:00","20261125","1845","2015","Digital Twins","CM","PARC-B203 (40),PARC-B201 (44)","Paris - Parc","KHALLOUFI Hamza","Salle double B201+B203",""],["MACSIN4A1326-2026-11-26-08:15:00","20261126","0815","0945","Master Thesis Bootcamp MSc1","TD","TERR - Salles de cours","Paris - Terrasses","AZOUGH Ahmed","",""],["MACSIN4A1326-2026-11-26-10:00:00","20261126","1000","1130","Master Thesis Bootcamp MSc1","TD","TERR - Salles de cours","Paris - Terrasses","AZOUGH Ahmed","",""],["MACXLVS70126-2026-11-26-13:30:00","20261126","1330","1500","English Workplace Solutions 1","LV","PARC - Salles de cours","Paris - Parc","REIKIE Patrick","ESILV A4 CSDS CRCL",""],["MACXLVS70126-2026-11-26-15:15:00","20261126","1515","1645","English Workplace Solutions 1","LV","PARC - Salles de cours","Paris - Parc","REIKIE Patrick","ESILV A4 CSDS CRCL",""],["MACSIN4A0326-2026-11-27-08:15:00","20261127","0815","0945","Advanced Database management","TD","PARC - Salles de cours","Paris - Parc","KAGHAT Fatima Zahra","",""],["MACSIN4A0326-2026-11-27-10:00:00","20261127","1000","1130","Advanced Database management","TD","PARC - Salles de cours","Paris - Parc","KAGHAT Fatima Zahra","",""],["MACSIN4A0726-2026-11-27-13:30:00","20261127","1330","1500","Digital Twins","TD","PARC - Salles de cours","Paris - Parc","KHALLOUFI Hamza","Attention salle A102",""],["MACSIN4A0726-2026-11-27-15:15:00","20261127","1515","1645","Digital Twins","TD","PARC - Salles de cours","Paris - Parc","KHALLOUFI Hamza","Attention salle A102",""],["MACSIN4A1126-2026-11-27-17:00:00","20261127","1700","1830","Advanced Networks","TD","PARC - Salles de cours","Paris - Parc","KHALLOUFI Hamza","",""],["MACSIN4A1126-2026-11-27-18:45:00","20261127","1845","2015","Advanced Networks","TD","PARC - Salles de cours","Paris - Parc","KHALLOUFI Hamza","",""],["MACSIN4A0626-2026-12-14-08:15:00","20261214","0815","0945","Web Application Architectures","CM","PARC-C001A (200) Amphi 1","Paris - Parc","NAUWYNCK Arnaud","AMPHI C001A « Ne pas modifier SVP »",""],["MACSIN4A1526-2026-12-14-10:00:00","20261214","1000","1130","Adv Object-Oriented Progr","CM","PARC-C001A (200) Amphi 1","Paris - Parc","NAHLE Nada","AMPHI C001A « Ne pas modifier SVP »",""],["MACSIN4A1526-2026-12-14-13:30:00","20261214","1330","1500","Adv Object-Oriented Progr","TD","PARC - Salles de cours","Paris - Parc","NAHLE Nada","",""],["MACSIN4A1526-2026-12-14-15:15:00","20261214","1515","1645","Adv Object-Oriented Progr","TD","PARC - Salles de cours","Paris - Parc","NAHLE Nada","",""],["MACSIN4A0426-2026-12-15-08:15:00","20261215","0815","0945","Python for Data Engineering","CM","PARC-C001A (200) Amphi 1","Paris - Parc","OULED DLALA Imen","AMPHI C001A « Ne pas modifier SVP »",""],["MACSIN4A1626-2026-12-15-10:00:00","20261215","1000","1130","DevOps & Software Engineering","CM","PARC-C001A (200) Amphi 1","Paris - Parc","SAIDI Houda","AMPHI C001A « Ne pas modifier SVP »",""],["MACSIN4A0626-2026-12-15-13:30:00","20261215","1330","1500","Web Application Architectures","TD","PARC - Salles de cours","Paris - Parc","NAUWYNCK Arnaud","",""],["MACSIN4A0626-2026-12-15-15:15:00","20261215","1515","1645","Web Application Architectures","TD","PARC - Salles de cours","Paris - Parc","NAUWYNCK Arnaud","",""],["MACSIN4A1626-2026-12-16-11:45:00","20261216","1145","1315","DevOps & Software Engineering","TD","PARC - Salles de cours","Paris - Parc","SAIDI Houda","",""],["MACSIN4A1626-2026-12-16-13:30:00","20261216","1330","1500","DevOps & Software Engineering","TD","PARC - Salles de cours","Paris - Parc","SAIDI Houda","",""],["MACSIN4A0426-2026-12-16-17:00:00","20261216","1700","1830","Python for Data Engineering","TD","PARC - Salles de cours","Paris - Parc","OULED DLALA Imen","",""],["MACSIN4A0426-2026-12-16-18:45:00","20261216","1845","2015","Python for Data Engineering","TD","PARC - Salles de cours","Paris - Parc","OULED DLALA Imen","",""],["MACSIN4A0426-2026-12-17-10:00:00","20261217","1000","1130","Python for Data Engineering","CM","PARC-C001A (200) Amphi 1","Paris - Parc","OULED DLALA Imen","AMPHI C001A « Ne pas modifier SVP »",""],["MACXLVS70126-2026-12-17-13:30:00","20261217","1330","1500","English Workplace Solutions 1","LV","PARC - Salles de cours","Paris - Parc","REIKIE Patrick","ESILV A4 CSDS CRCL",""],["MACXLVS70126-2026-12-17-15:15:00","20261217","1515","1645","English Workplace Solutions 1","LV","PARC - Salles de cours","Paris - Parc","REIKIE Patrick","ESILV A4 CSDS CRCL",""],["MACSIN4A1526-2026-12-18-08:15:00","20261218","0815","0945","Adv Object-Oriented Progr","CM","TERR-208 (70)","Paris - Terrasses","NAHLE Nada","TERR 208 « Ne pas modifier SVP »",""],["MACSIN4A1326-2026-12-18-10:00:00","20261218","1000","1130","Master Thesis Bootcamp MSc1","TD","TERR - Salles de cours","Paris - Terrasses","AZOUGH Ahmed","",""],["MACSIN4A1326-2026-12-18-11:45:00","20261218","1145","1315","Master Thesis Bootcamp MSc1","TD","TERR - Salles de cours","Paris - Terrasses","AZOUGH Ahmed","",""],["MACSIN4A1526-2026-12-18-15:15:00","20261218","1515","1645","Adv Object-Oriented Progr","TD","PARC - Salles de cours","Paris - Parc","NAHLE Nada","",""],["MACSIN4A1526-2026-12-18-17:00:00","20261218","1700","1830","Adv Object-Oriented Progr","TD","PARC - Salles de cours","Paris - Parc","NAHLE Nada","",""],["MACSIN4A1426-2027-01-11-08:15:00","20270111","0815","0945","Containeriz° & Orchestr°","CM","PARC-A204 (40),PARC-A206 (40),PARC-A202 (42)","Paris - Parc","CORDEIRO Maxime","Salle double A202+A204",""],["MACSIN4A0426-2027-01-11-10:00:00","20270111","1000","1130","Python for Data Engineering","TD","PARC-B102 (40)","Paris - Parc","OULED DLALA Imen","",""],["MACSIN4A0426-2027-01-11-11:45:00","20270111","1145","1315","Python for Data Engineering","TD","PARC-B102 (40)","Paris - Parc","OULED DLALA Imen","",""],["MACSIN4A1626-2027-01-11-15:15:00","20270111","1515","1645","DevOps & Software Engineering","CM","PARC-A206 (40),PARC-A202 (42),PARC-A204 (40)","Paris - Parc","SAIDI Houda","Salle double A202+A204",""],["MACSIN4A0326-2027-01-11-17:00:00","20270111","1700","1830","Advanced Database management","CM","PARC-A202 (42),PARC-A204 (40),PARC-A206 (40)","Paris - Parc","KAGHAT Fatima Zahra","Salle double A202+A204",""],["MACSIN4A1126-2027-01-12-08:15:00","20270112","0815","0945","Advanced Networks","CM","PARC-A202 (42),PARC-A204 (40)","Paris - Parc","KHALLOUFI Hamza","Salle double A202+A204",""],["MACSIN4A1626-2027-01-12-10:00:00","20270112","1000","1130","DevOps & Software Engineering","TD","PARC-B501 (44)","Paris - Parc","SAIDI Houda","",""],["MACSIN4A1626-2027-01-12-11:45:00","20270112","1145","1315","DevOps & Software Engineering","TD","PARC-B501 (44)","Paris - Parc","SAIDI Houda","",""],["MACSIN4A1126-2027-01-12-15:15:00","20270112","1515","1645","Advanced Networks","TD","PARC-B503 (44)","Paris - Parc","KHALLOUFI Hamza","",""],["MACSIN4A1126-2027-01-12-17:00:00","20270112","1700","1830","Advanced Networks","TD","PARC-B503 (44)","Paris - Parc","KHALLOUFI Hamza","",""],["MACSIN4A0726-2027-01-12-18:45:00","20270112","1845","2015","Digital Twins","CM","PARC-A202 (42),PARC-A204 (40),PARC-A201 (44)","Paris - Parc","KHALLOUFI Hamza","Salle double A202+A204",""],["MACSIN4A1426-2027-01-13-08:15:00","20270113","0815","0945","Containeriz° & Orchestr°","TD","PARC-A104 (36)","Paris - Parc","CORDEIRO Maxime","",""],["MACSIN4A1426-2027-01-13-10:00:00","20270113","1000","1130","Containeriz° & Orchestr°","TD","PARC-A104 (36)","Paris - Parc","CORDEIRO Maxime","",""],["MACSIN4A0726-2027-01-13-15:15:00","20270113","1515","1645","Digital Twins","TD","PARC-B503 (44)","Paris - Parc","KHALLOUFI Hamza","Attention salle A102",""],["MACSIN4A0726-2027-01-13-17:00:00","20270113","1700","1830","Digital Twins","TD","PARC-B503 (44)","Paris - Parc","KHALLOUFI Hamza","Attention salle A102",""],["MACSIN4A0726-2027-01-13-18:45:00","20270113","1845","2015","Digital Twins","TD","PARC-B503 (44)","Paris - Parc","KHALLOUFI Hamza","Attention salle A102",""],["MACSIN4A1326-2027-01-14-08:15:00","20270114","0815","0945","Master Thesis Bootcamp MSc1","TD","PARC - Salles de cours","Paris - Parc","AZOUGH Ahmed","",""],["MACSIN4A1326-2027-01-14-10:00:00","20270114","1000","1130","Master Thesis Bootcamp MSc1","TD","PARC - Salles de cours","Paris - Parc","AZOUGH Ahmed","",""],["MACXLVS70126-2027-01-14-13:30:00","20270114","1330","1500","English Workplace Solutions 1","LV","PARC-A505 (40)","Paris - Parc","REIKIE Patrick","ESILV A4 CSDS CRCL",""],["MACXLVS70126-2027-01-14-15:15:00","20270114","1515","1645","English Workplace Solutions 1","LV","PARC-A505 (40)","Paris - Parc","REIKIE Patrick","ESILV A4 CSDS CRCL",""],["MACSIN4A1126-2027-01-15-10:00:00","20270115","1000","1130","Advanced Networks","CM","PARC-B206 (40),PARC-B202 (38),PARC-B204 (40)","Paris - Parc","KHALLOUFI Hamza","Salle double B204+B206",""],["MACSIN4A0326-2027-01-15-13:30:00","20270115","1330","1500","Advanced Database management","TD","PARC-C404 (44)","Paris - Parc","KAGHAT Fatima Zahra","",""],["MACSIN4A0326-2027-01-15-15:15:00","20270115","1515","1645","Advanced Database management","TD","PARC-C404 (44)","Paris - Parc","KAGHAT Fatima Zahra","",""],["MACSIN4A1126-2027-01-15-17:00:00","20270115","1700","1830","Advanced Networks","TD","PARC-B503 (44)","Paris - Parc","KHALLOUFI Hamza","",""],["MACSIN4A1126-2027-01-15-18:45:00","20270115","1845","2015","Advanced Networks","TD","PARC-B503 (44)","Paris - Parc","KHALLOUFI Hamza","",""],["MACSIN4A0626-2027-02-08-08:15:00","20270208","0815","0945","Web Application Architectures","CM","PARC-B205 (40),PARC-B203 (40)","Paris - Parc","NAUWYNCK Arnaud","Salle double B203+B205",""],["MACSIN4A0426-2027-02-08-10:00:00","20270208","1000","1130","Python for Data Engineering","CM","PARC-B205 (40),PARC-B203 (40)","Paris - Parc","OULED DLALA Imen","Salle double B203+B205",""],["MACSIN4A1426-2027-02-08-11:45:00","20270208","1145","1315","Containeriz° & Orchestr°","CM","PARC-B203 (40),PARC-B205 (40)","Paris - Parc","CORDEIRO Maxime","Salle double B203+B205",""],["MACSIN4A0426-2027-02-08-15:15:00","20270208","1515","1645","Python for Data Engineering","TD","PARC - Salles de cours","Paris - Parc","OULED DLALA Imen","",""],["MACSIN4A0426-2027-02-08-17:00:00","20270208","1700","1830","Python for Data Engineering","TD","PARC - Salles de cours","Paris - Parc","OULED DLALA Imen","",""],["MACSIN4A1426-2027-02-09-10:00:00","20270209","1000","1130","Containeriz° & Orchestr°","TD","PARC - Salles de cours","Paris - Parc","CORDEIRO Maxime","",""],["MACSIN4A1426-2027-02-09-13:30:00","20270209","1330","1500","Containeriz° & Orchestr°","TD","PARC - Salles de cours","Paris - Parc","CORDEIRO Maxime","",""],["MACSIN4A1426-2027-02-09-15:15:00","20270209","1515","1645","Containeriz° & Orchestr°","TD","PARC - Salles de cours","Paris - Parc","CORDEIRO Maxime","",""],["MACSIN4A0626-2027-02-09-17:00:00","20270209","1700","1830","Web Application Architectures","TD","PARC - Salles de cours","Paris - Parc","NAUWYNCK Arnaud","",""],["MACSIN4A0626-2027-02-09-18:45:00","20270209","1845","2015","Web Application Architectures","TD","PARC - Salles de cours","Paris - Parc","NAUWYNCK Arnaud","",""],["MACSIN4A0326-2027-02-10-08:15:00","20270210","0815","0945","Advanced Database management","CM","PARC-C205 (40),PARC-C203 (40)","Paris - Parc","KAGHAT Fatima Zahra","Salle double B203+B205",""],["MACSIN4A1626-2027-02-10-10:00:00","20270210","1000","1130","DevOps & Software Engineering","CM","PARC-C203 (40),PARC-C205 (40)","Paris - Parc","SAIDI Houda","Salle double B203+B205",""],["MACSIN4A1626-2027-02-10-13:30:00","20270210","1330","1500","DevOps & Software Engineering","TD","PARC - Salles de cours","Paris - Parc","SAIDI Houda","",""],["MACSIN4A1626-2027-02-10-15:15:00","20270210","1515","1645","DevOps & Software Engineering","TD","PARC - Salles de cours","Paris - Parc","SAIDI Houda","",""],["MACSIN4A0326-2027-02-11-08:15:00","20270211","0815","0945","Advanced Database management","TD","PARC - Salles de cours","Paris - Parc","KAGHAT Fatima Zahra","",""],["MACSIN4A0326-2027-02-11-10:00:00","20270211","1000","1130","Advanced Database management","TD","PARC - Salles de cours","Paris - Parc","KAGHAT Fatima Zahra","",""],["MACXLVS70126-2027-02-11-13:30:00","20270211","1330","1500","English Workplace Solutions 1","LV","PARC - Salles de cours","Paris - Parc","REIKIE Patrick","ESILV A4 CSDS CRCL",""],["MACXLVS70126-2027-02-11-15:15:00","20270211","1515","1645","English Workplace Solutions 1","LV","PARC - Salles de cours","Paris - Parc","REIKIE Patrick","ESILV A4 CSDS CRCL",""],["MACSIN4A1526-2027-02-12-08:15:00","20270212","0815","0945","Adv Object-Oriented Progr","CM","PARC-B205 (40),PARC-B203 (40)","Paris - Parc","NAHLE Nada","Salle double B203+B205",""],["MACSIN4A1526-2027-02-12-10:00:00","20270212","1000","1130","Adv Object-Oriented Progr","TD","PARC - Salles de cours","Paris - Parc","NAHLE Nada","",""],["MACSIN4A1526-2027-02-12-11:45:00","20270212","1145","1315","Adv Object-Oriented Progr","TD","PARC - Salles de cours","Paris - Parc","NAHLE Nada","",""],["MACXLVS70126-2027-03-11-13:30:00","20270311","1330","1500","English Workplace Solutions 1","LV","PARC - Salles de cours","Paris - Parc","REIKIE Patrick","ESILV A4 CSDS CRCL",""],["MACXLVS70126-2027-03-11-15:15:00","20270311","1515","1645","English Workplace Solutions 1","LV","PARC - Salles de cours","Paris - Parc","REIKIE Patrick","ESILV A4 CSDS CRCL",""],["MACXLVS70126-2027-03-18-13:30:00","20270318","1330","1500","English Workplace Solutions 1","LV","PARC - Salles de cours","Paris - Parc","REIKIE Patrick","ESILV A4 CSDS CRCL",""],["MACXLVS70126-2027-03-18-15:15:00","20270318","1515","1645","English Workplace Solutions 1","LV","PARC - Salles de cours","Paris - Parc","REIKIE Patrick","ESILV A4 CSDS CRCL",""],["MACXLVS70126-2027-04-22-13:30:00","20270422","1330","1500","English Workplace Solutions 1","LV","PARC - Salles de cours","Paris - Parc","REIKIE Patrick","ESILV A4 CSDS CRCL",""],["MACXLVS70126-2027-04-22-15:15:00","20270422","1515","1645","English Workplace Solutions 1","LV","PARC - Salles de cours","Paris - Parc","REIKIE Patrick","ESILV A4 CSDS CRCL",""],["MACXLVS70126-2027-05-20-13:30:00","20270520","1330","1500","English Workplace Solutions 1","LV","PARC - Salles de cours","Paris - Parc","REIKIE Patrick","ESILV A4 CSDS CRCL",""],["MACXLVS70126-2027-05-20-15:15:00","20270520","1515","1645","English Workplace Solutions 1","LV","PARC - Salles de cours","Paris - Parc","REIKIE Patrick","ESILV A4 CSDS CRCL",""],["MACXLVS70126-2027-06-17-13:30:00","20270617","1330","1500","English Workplace Solutions 1","LV","PARC - Salles de cours","Paris - Parc","REIKIE Patrick","ESILV A4 CSDS CRCL",""],["MACXLVS70126-2027-06-17-15:15:00","20270617","1515","1645","English Workplace Solutions 1","LV","PARC - Salles de cours","Paris - Parc","REIKIE Patrick","ESILV A4 CSDS CRCL",""]],"ov":{}}</script>
+<script id="app-js">(()=>{
+"use strict";
+const HEAD="<meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1, viewport-fit=cover\">\n<title>Emploi du temps de Paul</title>\n<link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">\n<link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin>\n<link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap\">";
+const SHELL=`<div class="wrap">
+<header class="top"><h1>Emploi du temps</h1><p class="sub" id="sub"></p><p class="upd" id="upd"></p>
+<div class="owner" id="owner" hidden></div><p class="notice" id="notice" role="status" hidden></p></header>
+<div class="bar"><div class="views"><div class="seg" role="group" aria-label="Grille"><button type="button" data-v="c">Couleurs</button><button type="button" data-v="p">Papier</button></div><button type="button" class="solo" data-v="j">Jour par jour</button></div><div class="pills" id="pills" role="group" aria-label="Aller à une semaine"></div></div>
+<div class="filters" id="chips" role="group" aria-label="Filtrer par matière"></div>
+<p class="legend">Touche un cours pour voir le détail.</p>
+<main id="weeks"></main>
+<footer class="foot">Construit à partir de l’export .ics du portail ESILV. Les salles et horaires peuvent encore bouger : en cas de doute, le portail de l’école fait foi.</footer>
+</div>
+<div class="savebar" id="savebar" hidden><span id="sb-t"></span><span class="sb-a"><button type="button" class="btn" id="sb-undo">Annuler</button><button type="button" class="btn pri" id="sb-save">Enregistrer</button></span></div>
+<input type="file" id="file" accept=".ics,text/calendar" hidden>
+<dialog id="dlg" aria-labelledby="dlg-t"><div class="dlg-h"><div><h3 id="dlg-t"></h3><p id="dlg-s"></p></div><button type="button" class="x" id="dlg-x" aria-label="Fermer">×</button></div><div id="dlg-b"></div></dialog>`;
+const $=s=>document.querySelector(s);
+const RM=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;
+const J=["DIMANCHE","LUNDI","MARDI","MERCREDI","JEUDI","VENDREDI","SAMEDI"];
+const JL=["dimanche","lundi","mardi","mercredi","jeudi","vendredi","samedi"];
+const MO=["janvier","février","mars","avril","mai","juin","juillet","août","septembre","octobre","novembre","décembre"];
+const MC=["janv.","févr.","mars","avr.","mai","juin","juil.","août","sept.","oct.","nov.","déc."];
+const SUBJ=[[/database/i,"bdd","BDD avancée","Advanced Database Management"],[/object/i,"poo","POO avancée","Advanced Object-Oriented Programming"],[/web app/i,"web","Archi web","Web Application Architectures"],[/network/i,"net","Réseaux","Advanced Networks"],[/devops/i,"dev","DevOps","DevOps & Software Engineering"],[/python/i,"py","Python data","Python for Data Engineering"],[/digital twin/i,"dt","Digital twins","Digital Twins"],[/containeri|orchestr/i,"k8s","Conteneurs","Containerization & Orchestration"],[/english/i,"eng","Anglais","English Workplace Solutions"],[/thesis/i,"mtb","Thesis bootcamp","Master Thesis Bootcamp"],[/rentr/i,"ren","Rentrée","Réservation rentrée"],[/atelier/i,"ate","Atelier","Atelier outils digitaux"]];
+const FK=["bdd","poo","web","net","dev","py","dt","k8s","eng","mtb"];
+const FNAME={bdd:"BDD avancée",poo:"POO avancée",web:"Archi web",net:"Réseaux",dev:"DevOps",py:"Python data",dt:"Digital twins",k8s:"Conteneurs",eng:"Anglais",mtb:"Thesis bootcamp",autres:"Autres"};
+const esc=s=>String(s==null?"":s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const p2=n=>String(n).padStart(2,"0");
+const mins=t=>(+t.slice(0,2))*60+(+t.slice(2,4));
+const fT=t=>(+t.slice(0,2))+"h"+(t.slice(2,4)==="00"?"":t.slice(2,4));
+const hhmm=t=>t.slice(0,2)+":"+t.slice(2,4);
+const ymd=d=>d.getFullYear()+p2(d.getMonth()+1)+p2(d.getDate());
+const pd=s=>new Date(+s.slice(0,4),+s.slice(4,6)-1,+s.slice(6,8));
+const addD=(d,n)=>new Date(d.getFullYear(),d.getMonth(),d.getDate()+n);
+const cap=s=>s.charAt(0).toUpperCase()+s.slice(1);
+const fD=s=>{const d=pd(s);return d.getDate()+" "+MO[d.getMonth()]+" "+d.getFullYear()};
+const TODAY=ymd(new Date());
+let DATA;try{DATA=JSON.parse(document.getElementById("edt-data").textContent)}catch(e){DATA={}}
+let state={meta:DATA.meta||{},ev:DATA.ev||[],ov:DATA.ov||{}};
+let dl=null,pend=null,imported=false,edit=false,canEdit=false,art=null,saving=false,E=[],B=[],dlgUids=null,first=true,io=null;
+let prefs={view:"c",off:[]};
+try{Object.assign(prefs,JSON.parse(localStorage.getItem("edt-prefs")||"{}"))}catch(e){}
+if(!["c","p","j"].includes(prefs.view))prefs.view="c";
+if(!Array.isArray(prefs.off))prefs.off=[];
+const savePrefs=()=>{try{localStorage.setItem("edt-prefs",JSON.stringify(prefs))}catch(e){}};
+const cur=()=>pend||state;
+
+function subj(t){for(const [re,k,s,l] of SUBJ)if(re.test(t||""))return{k,s,l};return{k:"x",s:t||"Cours",l:t||"Cours"}}
+function place(loc,site,notes,flag){
+  loc=loc||"";site=site||"";notes=notes||"";
+  if(/online/i.test(site)||/zoom|teams/i.test(loc)||/distanciel/i.test(flag||""))return{room:"En ligne",code:"",campus:"En ligne"};
+  const campus=/arche/i.test(site)?"Arche":/terrasse/i.test(site)?"Terrasses":/parc/i.test(site)?"Pôle":/cyber/i.test(site)?"Cyber":"";
+  const g={};for(const x of loc.matchAll(/\b(PARC|ARCH|CYBR|TERR)-([A-Z0-9]+)/g))(g[x[1]]=g[x[1]]||new Set()).add(x[2]);
+  const code=Object.keys(g)[0]||(loc.match(/\b(PARC|ARCH|CYBR|TERR)\b/)||[])[1]||{"Arche":"ARCH","Terrasses":"TERR","Pôle":"PARC","Cyber":"CYBR"}[campus]||"";
+  let room=Object.keys(g).map(k=>k+"-"+[...g[k]].sort().join("-")).join(" + ");
+  if(!room){const a=notes.match(/salle\s+([A-Z]\d{3}[A-Z]?)\b/i);if(a)room=(code?code+"-":"")+a[1].toUpperCase()}
+  return{room,code,campus};
+}
+function schoolNote(n){if(!n)return"";if(/^salle (double|triple)/i.test(n)||/ne pas (modifier|changer)/i.test(n)||/^ESILV\b/i.test(n))return"";return n}
+function profOf(p){p=(p||"").trim();if(!p)return{sur:"",full:"",name:""};const t=p.split(/\s+/),sur=t.filter(x=>x.length>1&&x===x.toUpperCase()&&/[A-Z]/.test(x)),giv=t.filter(x=>!sur.includes(x));const S=sur.join(" ")||p;return{sur:S,full:(giv[0]?giv[0][0]+". ":"")+S,name:(giv.join(" ")+" "+S).trim()}}
+function build(st){
+  return st.ev.map(r=>{
+    const [uid,date,s0,e0,title,type,loc,site,prof,notes,flag]=r,sj=subj(title),pl=place(loc,site,notes,flag),o=st.ov[uid]||{};
+    const dt=pd(date),w=(dt.getDay()+6)%7,s=o.s||s0,e=o.e||e0;
+    return{uid,date,y:dt.getFullYear(),m:dt.getMonth(),d:dt.getDate(),wd:dt.getDay(),w,wk:ymd(addD(dt,-w)),s,e,key:sj.k,fk:FK.includes(sj.k)?sj.k:"autres",short:sj.s,long:sj.l,type:type==="NR"?"":type==="CMo"?"CM":(type||""),prof:profOf(prof),room:o.r!=null?o.r:pl.room,room0:pl.room,code:pl.code,campus:pl.campus,snote:schoolNote(notes),note:o.n||"",cx:!!o.x,edited:Object.keys(o).length>0};
+  }).sort((a,b)=>(a.date+a.s).localeCompare(b.date+b.s));
+}
+function merge(L){const o=[];for(const e of L){const p=o[o.length-1];if(p&&p.date===e.date&&p.key===e.key&&p.type===e.type&&p.room===e.room&&p.campus===e.campus&&p.cx===e.cx&&p.prof.name===e.prof.name&&mins(e.s)>=mins(p.e)&&mins(e.s)-mins(p.e)<=15){p.e=e.e;p.items.push(e)}else o.push(Object.assign({},e,{items:[e]}))}return o}
+function roomOf(e){return e.room?{t:e.room,u:false}:{t:(e.code?e.code+"-":"")+"?",u:true}}
+
+function render(){
+  const st=cur();E=build(st);
+  document.body.className="v-"+prefs.view;
+  const off=new Set(prefs.off),vis=E.filter(e=>!off.has(e.fk)),weeks=[...new Set(E.map(e=>e.wk))].sort();
+  renderHead(st,weeks);renderViews();renderChips();renderOwner();renderSavebar();
+  let lo=480,hi=1200;E.forEach(e=>{lo=Math.min(lo,Math.floor(mins(e.s)/60)*60);hi=Math.max(hi,Math.ceil(mins(e.e)/30)*30)});
+  const rng={s:lo,rows:(hi-lo)/30};
+  B=[];let h="";
+  weeks.forEach((wk,i)=>{
+    const mon=pd(wk),L=vis.filter(e=>e.wk===wk),bl=merge(L),n=L.filter(e=>!e.cx).length;
+    h+=`<section class="week" id="w-${wk}" data-wk="${wk}"><div class="wk-h"><h2>Semaine du ${mon.getDate()} ${MO[mon.getMonth()]}</h2><span>${n} créneau${n>1?"x":""}</span></div>${prefs.view==="j"?daysHTML(bl):gridHTML(mon,bl,rng)}</section>`;
+    const nx=weeks[i+1];
+    if(nx){const g=Math.round((pd(nx)-mon)/6048e5)-1;if(g>0){const a=addD(mon,7),b=addD(pd(nx),-3);h+=`<p class="gap">Pas de cours du ${a.getDate()} ${MC[a.getMonth()]} au ${b.getDate()} ${MC[b.getMonth()]}</p>`}}
+  });
+  if(!weeks.length)h=`<p class="empty">Aucun cours dans cet emploi du temps pour l’instant.</p>`;
+  $("#weeks").innerHTML=h;
+  renderPills(weeks);
+  if(first){first=false;jumpToNow(weeks)}
+}
+let gx=0,syncing=false;
+function syncScroll(){
+  const all=[...document.querySelectorAll(".gscroll")];
+  all.forEach(el=>{el.scrollLeft=gx;el.addEventListener("scroll",()=>{if(syncing)return;syncing=true;gx=el.scrollLeft;all.forEach(o=>{if(o!==el&&o.scrollLeft!==gx)o.scrollLeft=gx});requestAnimationFrame(()=>{syncing=false})},{passive:true})});
+}
+function renderHead(st,weeks){
+  const m=st.meta||{},ds=st.ev.map(r=>r[1]).sort();
+  let s=(m.who?m.who+", ":"")+(m.desc||"")+".";
+  if(ds.length)s+=` Du ${fD(ds[0])} au ${fD(ds[ds.length-1])}.`;
+  $("#sub").textContent=s.replace(/^\.\s*/,"");
+  const last=[m.updated,m.edited].filter(Boolean).sort().pop();
+  $("#upd").textContent=last?"Dernière MAJ : "+fD(last.replace(/-/g,"")):"";
+}
+function renderViews(){document.querySelectorAll(".views [data-v]").forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.v===prefs.view)))}
+function renderChips(){
+  const present=new Set(E.map(e=>e.fk)),off=new Set(prefs.off),keys=[...FK,"autres"].filter(k=>present.has(k));
+  $("#chips").innerHTML=keys.map(k=>`<button type="button" class="chip s-${k==="autres"?"x":k}" data-k="${k}" aria-pressed="${!off.has(k)}"><i aria-hidden="true"></i>${FNAME[k]}</button>`).join("")+(off.size?`<button type="button" class="chip reset" data-k="*">Tout afficher</button>`:"");
+}
+function gridHTML(mon,bl,rng){
+  let hd=`<div class="c0"></div>`;
+  for(let i=0;i<5;i++){const x=addD(mon,i);hd+=`<div${ymd(x)===TODAY?' class="today"':""}>${i===0?J[1]+" "+p2(x.getDate())+"/"+p2(x.getMonth()+1):J[x.getDay()]}</div>`}
+  let ln="",tl="";for(let r=0;r<rng.rows;r++){const t=rng.s+r*30;ln+=`<div class="ln" style="top:calc(var(--rh)*${r})"></div>`;tl+=`<div class="tl">${Math.floor(t/60)}h${t%60?"30":""}</div>`}
+  let cols="";for(let w=0;w<5;w++)cols+=`<div class="col">${bl.filter(b=>b.w===w).map(b=>blkHTML(b,rng)).join("")}</div>`;
+  return `<div class="sheet gscroll"><div class="gin"><div class="gh">${hd}</div><div class="gb" style="--rows:${rng.rows}">${ln}<div class="tcol">${tl}</div><div class="cols">${cols}</div></div></div></div>`;
+}
+function blkHTML(b,rng){
+  const i=B.push(b)-1,st=mins(b.s),du=mins(b.e)-st,r=roomOf(b);
+  const al=`${b.long}${b.type?" "+b.type:""}, ${JL[b.wd]} ${b.d} ${MO[b.m]}, ${fT(b.s)} à ${fT(b.e)}, ${r.u?"salle pas encore attribuée":r.t}${b.cx?", annulé":""}`;
+  return `<button type="button" class="blk s-${b.key}${b.cx?" cx":""}" style="--y:${(st-rng.s)/30};--h:${du/30}" data-i="${i}"${du<75?' data-xs=""':""} aria-label="${esc(al)}"><span class="nm"><span class="sh">${esc(b.short)}</span><span class="lg">${esc(b.long)}</span></span>${b.prof.full?`<span class="pf">${esc(b.prof.full)}</span>`:""}<span class="tm">${fT(b.s)}-${fT(b.e)}</span><span class="rm${r.u?" unk":""}">${esc(r.t).replace(/[-+]/g,"$&<wbr>")}</span>${b.cx?`<span class="cxl">Annulé</span>`:""}${b.type?`<span class="ty2">${b.type}</span>`:""}</button>`;
+}
+function daysHTML(bl){
+  const by={};bl.forEach(b=>(by[b.date]=by[b.date]||[]).push(b));
+  const ks=Object.keys(by).sort();
+  if(!ks.length)return `<p class="empty">Rien cette semaine avec ces filtres.</p>`;
+  return `<div class="days">`+ks.map(k=>{const L=by[k],a=L[0];return `<div class="dbox"><div class="dh${k===TODAY?" today":""}">${J[a.wd]} ${p2(a.d)}/${p2(a.m+1)}</div>`+L.map(b=>{const i=B.push(b)-1,r=roomOf(b),sm="";return `<button type="button" class="drow s-${b.key}${b.cx?" cx":""}" data-i="${i}"><span class="dtime">${fT(b.s)} – ${fT(b.e)}</span><span class="dmain"><span class="dname"><i class="sw" aria-hidden="true"></i>${esc(b.long)}${b.type?` <span class="ty">${b.type}</span>`:""}</span><span class="dsub">${esc(b.prof.full)}${b.cx?(b.prof.full?", ":"")+"annulé":""}</span></span><span class="droom${r.u?" unk":""}">${esc(r.t).replace(/[-+]/g,"$&<wbr>")}${sm}</span></button>`}).join("")+`</div>`}).join("")+`</div>`;
+}
+function renderPills(weeks){
+  const now=weeks.find(w=>ymd(addD(pd(w),4))>=TODAY);
+  $("#pills").innerHTML=weeks.map(w=>{const d=pd(w);return `<button type="button" data-wk="${w}"${w===now?' class="now" title="Prochaine semaine de cours"':""}>${d.getDate()} ${MC[d.getMonth()]}</button>`}).join("");
+  if(io)io.disconnect();
+  if(!("IntersectionObserver" in window))return;
+  io=new IntersectionObserver(es=>es.forEach(en=>{if(!en.isIntersecting)return;const wk=en.target.dataset.wk;let hit=null;document.querySelectorAll("#pills [data-wk]").forEach(a=>{const on=a.dataset.wk===wk;a.classList.toggle("on",on);if(on)hit=a});if(hit){const p=$("#pills");p.scrollTo({left:Math.max(0,hit.offsetLeft-12),behavior:RM?"auto":"smooth"})}}),{rootMargin:"-130px 0px -55% 0px"});
+  document.querySelectorAll(".week").forEach(s=>io.observe(s));
+}
+function jumpToNow(weeks){const now=weeks.find(w=>ymd(addD(pd(w),4))>=TODAY);if(now&&now!==weeks[0]){const s=document.getElementById("w-"+now);if(s)s.scrollIntoView({block:"start"})}}
+function renderOwner(){
+  const el=$("#owner");if(!canEdit){el.hidden=true;el.innerHTML="";return}
+  el.hidden=false;
+  const ex=dl?`<button type="button" class="btn" id="exp">Télécharger la version pour mes amis</button>`:"";
+  el.innerHTML=edit?`<button type="button" class="btn pri" id="done">Terminer</button><button type="button" class="btn" id="imp">Importer un nouvel export .ics</button>${ex}<span class="hint">Touche un cours pour corriger sa salle ou son horaire, ajouter une note ou le marquer annulé. Après avoir enregistré, télécharge la version pour tes amis et remplace l’ancienne sur ton hébergement.</span>`:`<button type="button" class="btn" id="startEdit">Modifier l’emploi du temps</button>${ex}<span class="hint">Ces boutons n’apparaissent que pour toi.</span>`;
+}
+function diffCount(){if(!pend)return 0;const ks=new Set([...Object.keys(pend.ov),...Object.keys(state.ov)]);let n=0;ks.forEach(k=>{if(JSON.stringify(pend.ov[k]||null)!==JSON.stringify(state.ov[k]||null))n++});return n}
+function renderSavebar(){
+  const sb=$("#savebar"),n=diffCount();
+  if(pend&&!n&&!imported)pend=null;
+  if(!pend){sb.hidden=true;return}
+  sb.hidden=false;const p=[];if(imported)p.push("nouvel export .ics");if(n)p.push(n+" correction"+(n>1?"s":""));
+  $("#sb-t").textContent=cap(p.join(" et "))+" à enregistrer";
+}
+function notice(msg){const n=$("#notice");n.textContent=msg||"";n.hidden=!msg}
+
+function openDlg(b){dlgUids=b.items.map(x=>x.uid);fillDlg();const d=$("#dlg");if(!d.open){try{d.showModal()}catch(e){d.setAttribute("open","")}}}
+function fillDlg(){
+  if(!dlgUids)return;const items=dlgUids.map(u=>E.find(e=>e.uid===u)).filter(Boolean);
+  if(!items.length){$("#dlg").close();return}
+  const a=items[0];$("#dlg-t").textContent=a.long;$("#dlg-s").textContent=[a.type,a.prof.full].filter(Boolean).join(", ");
+  $("#dlg-b").innerHTML=items.map(e=>`<section class="sess" data-uid="${esc(e.uid)}"><div class="info">${infoHTML(e)}</div>${edit?formHTML(e):""}</section>`).join("");
+}
+function infoHTML(e){
+  const r=roomOf(e);
+  return `<p class="sd">${cap(JL[e.wd])} ${e.d} ${MO[e.m]}, ${fT(e.s)} – ${fT(e.e)}${e.cx?` <span class="cxb">Annulé</span>`:""}</p><dl class="kv"><dt>Salle</dt><dd class="${r.u?"unk":"red"}">${esc(r.u?"Pas encore attribuée":(e.room||r.t))}</dd><dt>Campus</dt><dd>${esc(e.campus||"Non précisé")}</dd>${e.prof.full?`<dt>Prof</dt><dd>${esc(e.prof.full)}</dd>`:""}${e.snote?`<dt>École</dt><dd>${esc(e.snote)}</dd>`:""}${e.note?`<dt>Note</dt><dd>${esc(e.note)}</dd>`:""}</dl>${e.edited?`<p class="ed">Corrigé à la main par rapport à l’export de l’école.</p>`:""}`;
+}
+function formHTML(e){
+  return `<div class="ef"><label class="full">Salle<input type="text" data-f="r" value="${esc(e.room)}" placeholder="Ex. PARC-B201" autocomplete="off"></label><label>Début<input type="time" step="300" data-f="s" value="${hhmm(e.s)}"></label><label>Fin<input type="time" step="300" data-f="e" value="${hhmm(e.e)}"></label><p class="err" role="alert"></p><label class="full">Note visible par tous<input type="text" data-f="n" value="${esc(e.note)}" placeholder="Ex. apporter son PC" autocomplete="off"></label><label class="chk full"><input type="checkbox" data-f="x"${e.cx?" checked":""}> Cours annulé</label><button type="button" class="btn full" data-reset${e.edited?"":" hidden"}>Revenir à l’export de l’école</button></div>`;
+}
+function ensurePend(){if(!pend)pend={meta:Object.assign({},state.meta),ev:state.ev.slice(),ov:JSON.parse(JSON.stringify(state.ov))}}
+function setField(sec,f,inp){
+  const uid=sec.dataset.uid;ensurePend();const raw=pend.ev.find(r=>r[0]===uid);if(!raw)return;
+  const o=Object.assign({},pend.ov[uid]||{}),err=sec.querySelector(".err");err.textContent="";
+  if(f==="r"){const v=inp.value.trim(),orig=place(raw[6],raw[7],raw[9],raw[10]).room;if(v===orig)delete o.r;else o.r=v}
+  else if(f==="s"||f==="e"){
+    const v=inp.value.replace(":","").slice(0,4);
+    if(!/^\d{4}$/.test(v)){err.textContent="Indique une heure valide.";return}
+    const s=f==="s"?v:(o.s||raw[2]),e=f==="e"?v:(o.e||raw[3]);
+    if(mins(e)<=mins(s)){err.textContent="La fin doit être après le début.";inp.value=hhmm(f==="s"?(o.s||raw[2]):(o.e||raw[3]));return}
+    const orig=f==="s"?raw[2]:raw[3];if(v===orig)delete o[f];else o[f]=v;
+  }
+  else if(f==="n"){const v=inp.value.trim();if(v)o.n=v;else delete o.n}
+  else if(f==="x"){if(inp.checked)o.x=1;else delete o.x}
+  if(Object.keys(o).length)pend.ov[uid]=o;else delete pend.ov[uid];
+  render();
+  const e=E.find(x=>x.uid===uid);if(e){sec.querySelector(".info").innerHTML=infoHTML(e);const rb=sec.querySelector("[data-reset]");if(rb)rb.hidden=!e.edited}
+}
+
+function parseICS(txt){
+  const un=txt.replace(/\r\n?/g,"\n").replace(/\n[ \t]/g,""),out=[];
+  un.split("BEGIN:VEVENT").slice(1).forEach(b=>{
+    b=b.split("END:VEVENT")[0];const d={};
+    b.split("\n").forEach(l=>{const i=l.indexOf(":");if(i<1)return;const k=l.slice(0,i).split(";")[0].trim().toUpperCase();if(!(k in d))d[k]=l.slice(i+1).replace(/\\n/gi," ").replace(/\\([,;\\])/g,"$1").trim()});
+    if(!d.DTSTART||/cancel/i.test(d.STATUS||""))return;
+    const s=icsT(d.DTSTART),e=icsT(d.DTEND||d.DTSTART);
+    const title=d.TITLE||(d.SUMMARY||"").replace(/^\[[^\]]*\]/,"").replace(/\s*\[[^\]]*\].*$/,"").trim();
+    out.push([d.UID||(s.d+s.t+title),s.d,s.t,e.t,title,d.TYPECOURS||"",d.LOCATION||"",d.SITE||"",d.PROF||"",d.NOTES||d.DESCRIPTION||"",d.FLAGPRESENTIEL||""]);
+  });
+  return out.sort((a,b)=>(a[1]+a[2]).localeCompare(b[1]+b[2]));
+}
+function icsT(v){
+  v=v.trim();
+  const z=v.match(/^(\d{4})(\d{2})(\d{2})T(\d{2})(\d{2})(\d{2})?Z$/);
+  if(z){const x=new Date(Date.UTC(+z[1],+z[2]-1,+z[3],+z[4],+z[5]));const p=new Intl.DateTimeFormat("fr-FR",{timeZone:"Europe/Paris",year:"numeric",month:"2-digit",day:"2-digit",hour:"2-digit",minute:"2-digit",hourCycle:"h23"}).formatToParts(x),g=t=>(p.find(q=>q.type===t)||{}).value||"00";return{d:g("year")+g("month")+g("day"),t:g("hour")+g("minute")}}
+  return{d:v.slice(0,8),t:v.length>=13?v.slice(9,13):"0000"};
+}
+async function onImport(ev){
+  const f=ev.target.files&&ev.target.files[0];ev.target.value="";if(!f)return;
+  let nev;try{const txt=f.text?await f.text():await new Promise((ok,ko)=>{const r=new FileReader();r.onload=()=>ok(r.result);r.onerror=ko;r.readAsText(f)});nev=parseICS(txt)}catch(e){nev=[]}
+  if(!nev.length){notice("Ce fichier ne contient aucun cours. Vérifie que c’est bien l’export .ics de ton emploi du temps.");return}
+  ensurePend();
+  const old=pend.ev,om=new Map(old.map(r=>[r[0],r])),nm=new Map(nev.map(r=>[r[0],r]));
+  let add=0,del=0,chg=0;
+  nev.forEach(r=>{const o=om.get(r[0]);if(!o)add++;else if(o[2]!==r[2]||o[3]!==r[3]||o[6]!==r[6]||o[7]!==r[7])chg++});
+  old.forEach(r=>{if(!nm.has(r[0]))del++});
+  const ov={},used=new Set();let kept=0,lost=0;
+  for(const [uid,o] of Object.entries(pend.ov)){
+    if(nm.has(uid)){ov[uid]=o;kept++;used.add(uid);continue}
+    const code=uid.split("-")[0],date=(om.get(uid)||[])[1],c=nev.filter(r=>r[0].split("-")[0]===code&&r[1]===date&&!om.has(r[0])&&!used.has(r[0]));
+    const rest=Object.assign({},o);delete rest.s;delete rest.e;
+    if(date&&c.length===1&&Object.keys(rest).length){ov[c[0][0]]=rest;used.add(c[0][0]);kept++}else lost++;
+  }
+  pend.ev=nev;pend.ov=ov;pend.meta.updated=new Date().toISOString().slice(0,10);pend.meta.src=f.name;imported=true;
+  const tot=kept+lost;
+  notice(`Export lu : ${nev.length} créneaux, dont ${add} nouveau${add>1?"x":""}, ${del} retiré${del>1?"s":""} et ${chg} avec une salle ou un horaire différent.`+(tot?(kept===1?" Ta correction est conservée":kept?` ${kept} de tes corrections sont conservées`:" Aucune de tes corrections n’a pu être reportée")+(lost?`, ${lost} ne correspond${lost>1?"ent":""} plus à aucun cours`:"")+".":"")+` Vérifie puis enregistre.`);
+  render();fillDlg();
+}
+function buildPage(st){
+  const css=document.getElementById("app-css").textContent,js=document.getElementById("app-js").textContent;
+  const json=JSON.stringify(st).replace(/</g,"\\u003c").replace(/\u2028/g,"\\u2028").replace(/\u2029/g,"\\u2029");
+  return "<!doctype html>\n<html lang=\"fr\">\n<head>\n"+HEAD+"\n<style id=\"app-css\">"+css+"</style>\n</head>\n<body>\n<div id=\"root\"></div>\n<script type=\"application/json\" id=\"edt-data\">"+json+"<\/script>\n<script id=\"app-js\">"+js+"<\/script>\n</body>\n</html>\n";
+}
+async function save(){
+  if(!pend||saving)return;
+  if(!art){notice("Enregistrement impossible depuis cette vue.");return}
+  const b=$("#sb-save");saving=true;b.textContent="Enregistrement…";b.setAttribute("aria-busy","true");
+  const st={meta:Object.assign({},pend.meta,{edited:new Date().toISOString().slice(0,10)}),ev:pend.ev,ov:pend.ov};
+  try{sessionStorage.setItem("edt-edit",edit?"1":"0");sessionStorage.setItem("edt-msg",dl?"Enregistré. Télécharge la version pour tes amis pour mettre à jour leur lien.":"Enregistré.")}catch(e){}
+  try{await art.publish(buildPage(st));state=st;pend=null;imported=false;notice("Enregistré. Tes amis voient maintenant cette version.");render()}
+  catch(err){
+    try{sessionStorage.removeItem("edt-msg")}catch(e){}
+    const c=err&&err.code;
+    if(c==="conflict")notice("Une version plus récente vient d’être enregistrée : la page se recharge avec elle.");
+    else if(["not_writer","not_granted","not_declared","consent_required","capability_disabled","capability_removed"].includes(c)){canEdit=false;edit=false;notice("Cette vue est en lecture seule : les modifications ne peuvent pas être enregistrées ici.");render()}
+    else if(c==="rate_limited")notice("Trop d’enregistrements rapprochés. Réessaie dans une minute.");
+    else if(c==="too_large")notice("La page dépasse la taille maximale autorisée.");
+    else notice("L’enregistrement a échoué. Réessaie dans un instant.");
+  }
+  finally{saving=false;b.textContent="Enregistrer";b.removeAttribute("aria-busy")}
+}
+async function exportFriends(){
+  if(!dl)return;
+  try{const r=await dl.save({filename:"index.html",data:new Blob([buildPage(state)],{type:"text/html"})});if(r&&r.status==="saved")notice((pend?"Fichier téléchargé, sans tes modifications pas encore enregistrées. ":"Fichier téléchargé. ")+"Remplace l’ancien index.html sur ton hébergement pour mettre à jour le lien de tes amis.")}
+  catch(e){const c=e&&e.code;if(c==="declined")return;notice(c==="rate_limited"?"Un téléchargement est déjà en attente.":"Le téléchargement n’est pas disponible dans cette vue.")}
+}
+async function initCaps(){
+  const cl=window.claude;if(!cl||typeof cl.use!=="function")return;
+  try{const [u,a,w]=await Promise.all([cl.use("user"),cl.use("artifact"),cl.use("downloads")]);art=a;dl=w;canEdit=!!(a&&u&&await u.canEdit())}catch(e){canEdit=false}
+  if(!canEdit)return;
+  try{const m=sessionStorage.getItem("edt-msg");if(m){notice(m);sessionStorage.removeItem("edt-msg")}}catch(e){}
+  try{edit=sessionStorage.getItem("edt-edit")==="1";sessionStorage.removeItem("edt-edit")}catch(e){}
+  render();
+}
+function wire(){
+  document.querySelector(".views").addEventListener("click",e=>{const b=e.target.closest("[data-v]");if(!b)return;prefs.view=b.dataset.v;savePrefs();render()});
+  $("#chips").addEventListener("click",e=>{const b=e.target.closest("[data-k]");if(!b)return;const k=b.dataset.k;if(k==="*")prefs.off=[];else{const s=new Set(prefs.off);s.has(k)?s.delete(k):s.add(k);prefs.off=[...s]}savePrefs();render()});
+  $("#pills").addEventListener("click",e=>{const a=e.target.closest("[data-wk]");if(!a)return;const s=document.getElementById("w-"+a.dataset.wk);if(s)s.scrollIntoView({behavior:RM?"auto":"smooth",block:"start"})});
+  $("#weeks").addEventListener("click",e=>{const b=e.target.closest("[data-i]");if(b&&B[+b.dataset.i])openDlg(B[+b.dataset.i])});
+  $("#owner").addEventListener("click",e=>{const t=e.target.closest("button");if(!t)return;if(t.id==="startEdit"){edit=true;render();fillDlg()}else if(t.id==="done"){edit=false;render();fillDlg()}else if(t.id==="imp")$("#file").click();else if(t.id==="exp")exportFriends()});
+  $("#file").addEventListener("change",onImport);
+  $("#sb-undo").addEventListener("click",()=>{pend=null;imported=false;notice("");render();fillDlg()});
+  $("#sb-save").addEventListener("click",save);
+  const d=$("#dlg");
+  $("#dlg-x").addEventListener("click",()=>d.close());
+  d.addEventListener("click",e=>{if(e.target===d)d.close()});
+  d.addEventListener("close",()=>{dlgUids=null});
+  $("#dlg-b").addEventListener("change",e=>{const i=e.target.closest("[data-f]");if(i)setField(i.closest(".sess"),i.dataset.f,i)});
+  $("#dlg-b").addEventListener("click",e=>{const r=e.target.closest("[data-reset]");if(!r)return;ensurePend();delete pend.ov[r.closest(".sess").dataset.uid];render();fillDlg()});
+  window.addEventListener("beforeunload",e=>{if(pend&&!saving){e.preventDefault();e.returnValue=""}});
+}
+document.getElementById("root").innerHTML=SHELL;
+wire();render();initCaps();
+})();
+</script>
+</body>
+</html>
